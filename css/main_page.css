@@ -1,12 +1,7 @@
-/*Шапка главной страницы*/
 :root {
     --color-primary: #FFA640;
     --color-input: #D9D9D9;
     --back-color: #FFCB73;
-}
-
-.slider_image_main_menu {
-    background-color: var(--back-color);
 }
 
 .main-header {
@@ -19,14 +14,13 @@
 
 .search-input{
     background: var(--color-input);
+    border-radius: 13px;
 }
 
 .search-button{
     margin-left: -35pt;
 }
 
-
-/*Подвал главной страницы*/
 .footer {
     background-color: var(--color-primary);
 }
@@ -39,10 +33,6 @@
 
 .content-box {
     background-color: var(--back-color);
-}
-
-.slider_image_main_menu {
-    background-color: black;
 }
 
 .popular_product_1 {

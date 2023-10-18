@@ -1,0 +1,50 @@
+:root {
+    --color-primary: #FFA640;
+    --color-input: #D9D9D9;
+    --back-color: #FFCB73;
+}
+
+.main-header {
+    background: var(--color-primary);
+}
+
+.menu-icon{
+    max-height: 52px;
+}
+
+.search-input{
+    background: var(--color-input);
+    border-radius: 13px;
+}
+
+.search-button{
+    margin-left: -35pt;
+}
+
+.footer {
+    background-color: var(--color-primary);
+}
+
+.catalog-menu {
+    background-color: var(--color-primary);
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.content {
+    background-color: var(--back-color);
+}
+
+.price_item h4 {
+    color: chartreuse;
+}
+
+.btn_active {
+    background-color: yellow;
+    color: red;
+    border-color: red;
+    border-radius: 3px;
+    border-spacing: 10px;
+}
+
+.btn_model
