@@ -31,20 +31,27 @@
     border-radius: 3px;
 }
 
+.plus_minus_item {
+    max-height: 50px;
+    max-width: 100px;
+    border: 3px solid black;
+    color: black;
+    background-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
 .content {
+    min-height: calc(100vh - 80px);
     background-color: var(--back-color);
 }
 
-.price_item h4 {
-    color: chartreuse;
+.content hr{
+    color: black;
 }
 
-.btn_active {
-    background-color: yellow;
-    color: red;
-    border-color: red;
-    border-radius: 3px;
-    border-spacing: 10px;
+.product_in_basket_1 {
+    border: 1px solid black;
 }
-
-.btn_model
