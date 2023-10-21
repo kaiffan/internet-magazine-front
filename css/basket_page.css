@@ -31,27 +31,12 @@
     border-radius: 3px;
 }
 
-.content {
-    background-color: var(--back-color);
-}
-
-.price_item h4 {
-    color: chartreuse;
-}
-
-.btn_active {
-    background-color: yellow;
-    color: red;
-    border-color: red;
-    border-radius: 3px;
-    border-spacing: 10px;
-}
-
-.btn_model {
-    border-radius: 3px;
-    border-spacing: 10px;
-    background-color: #e6dbb9;
+.plus_minus_item {
+    max-height: 50px;
+    max-width: 100px;
+    border: 3px solid black;
     color: black;
+    background-color: white;
 }
 
 * {
@@ -60,4 +45,13 @@
 }
 .content {
     min-height: calc(100vh - 80px);
+    background-color: var(--back-color);
+}
+
+.content hr{
+    color: black;
+}
+
+.product_in_basket_1 {
+    border: 1px solid black;
 }
