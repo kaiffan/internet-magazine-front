@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/catalog_page.css" rel="stylesheet">
+    <title>Catalog</title>
+</head>
+<body>
+<header class="py-3 main-header">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-1" href='main_page.html'>
+                <img src="/img/logo_company.png" class="img-fluid" alt="logo">
+            </div>
+            <a class="col-1 text-center">
+                <img src="/img/logo_catalog.png" class="img-fluid menu-icon image-shadow" alt="">
+            </a>
+            <a class="col-1 text-center">
+                <img src="/img/logo_location.png" class="img-fluid menu-icon image-shadow" alt="">
+            </a>
+            <form class="col-6 d-flex">
+                <input class="form-control search-input" type="search" placeholder="Поиск...">
+                <button class="bg-transparent border-0 search-button" type="submit">
+                    <img src="/img/logo_search.png" alt="">
+                </button>
+            </form>
+            <a class="col-1 text-center">
+                <img src="/img/logo_user.png" class="img-fluid menu-icon image-shadow" alt="">
+            </a>
+            <a class="col-1 text-center">
+                <img src="/img/logo_favorite.png" class="img-fluid menu-icon image-shadow" alt="">
+            </a>
+            <a class="col-1 text-center" href="basket_page.html">
+                <img src="/img/logo_cart.png" class="img-fluid menu-icon image-shadow" alt="">
+            </a>
+        </div>
+    </div>
+</header>
+<div class="content">
+    <div class="container catalog_content">
+        <div class="row">
+            <form class="col-3 d-flex mt-2">
+                <input class="form-control search-input-catalog" type="search" placeholder="Поиск по категории">
+                <button class="bg-transparent border-0 search-button" type="submit">
+                    <img src="/img/logo_search.png" alt="">
+                </button>
+            </form>
+            <div class="d-flex col mt-2 head_setting_group_sort">
+                <div class="d-flex col align-items-center">
+                    <h6>Сортировать по:</h6>
+                    <select class="form-select form-select-sm form_select_catalog_head ms-2" aria-label="Пример выбора по умолчанию">
+                        <option selected>сначала популярные</option>
+                        <option value="1">сначала недорогие</option>
+                        <option value="2">сначала дорогие</option>
+                        <option value="3">сначала с лучшей оценке</option>
+                    </select>
+                </div>
+                <div class=" d-flex col align-items-center">
+                    <h6>Группировка:</h6>
+                    <select class="d-flex form-select form-select-sm form_select_catalog_head ms-2" aria-label="Пример выбора по умолчанию">
+                        <option selected>отсутствует</option>
+                        <option value="1">по наличию</option>
+                        <option value="2">по производителю</option>
+                        <option value="3">по встроенной памяти</option>
+                        <option value="4">по диагонали экрана</option>
+                    </select>
+                </div>
+                <div class="d-flex col justify-content-end mt-1 mb-1">
+                    <button class="btn btn_not_active_head_setting" id="btn_not_active_head_setting" type="submit">
+                        <img src="/img/logo_rows.png" alt="">
+                    </button>
+                    <button class="btn btn_active_head_setting" id="btn_active_head_setting" type="submit">
+                        <img src="/img/logo_table.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer mt-auto py-2 text-black">
+    <div class="container">
+        <div class="row">
+            <div class="col py-3">
+                <img src="/img/logo_company.png" class="img-fluid menu-icon image-shadow" alt="">
+                <h6>CompShop</h6>
+            </div>
+            <div class="col">
+                <h5 class="line">CompShop</h5>
+                <a class="nav-link p-1" href="">О компании</a>
+                <a class="nav-link p-1" href="">Новости</a>
+                <a class="nav-link p-1" href="">Партнерам</a>
+                <a class="nav-link p-1" href="">Для прессы</a>
+            </div>
+            <div class="col">
+                <h5 class="line">Покупателям</h5>
+                <a class="nav-link p-1" href="">Бонусная программа</a>
+                <a class="nav-link p-1" href="">Как оформить заказ</a>
+                <a class="nav-link p-1" href="">Пункты выдачи</a>
+                <a class="nav-link p-1" href="">Персональные данные</a>
+            </div>
+            <div class="col">
+                <h5 class="line">Услуги</h5>
+                <a class="nav-link p-1" href="">Доставка</a>
+                <a class="nav-link p-1" href="">Самовывоз</a>
+                <a class="nav-link p-1" href="">Сервис-центры</a>
+            </div>
+            <div class="col">
+                <h5 class="line">Помощь</h5>
+                <a class="nav-link p-1" href="">Способы оплаты</a>
+                <a class="nav-link p-1" href="">Как оформить заказ</a>
+                <a class="nav-link p-1" href="">Юр. лицам</a>
+                <a class="nav-link p-1" href="">Обмен, возврат, гарантия</a>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <h5 class="line">Соц.сети</h5>
+                    <div class="col py-2 px-1">
+                        <img src="/img/logo_vk.png" class="img-fluid menu-icon image-shadow" alt="">
+                    </div>
+                    <div class="col py-2 px-1">
+                        <img src="/img/logo_instagram.png" class="img-fluid menu-icon image-shadow" alt="">
+                    </div>
+                    <div class="col py-2 px-1">
+                        <img src="/img/logo_youtube.png" class="img-fluid menu-icon image-shadow" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col py-1 px-1">
+                        <img src="/img/logo_share.png" class="img-fluid menu-icon image-shadow" alt="">
+                    </div>
+                    <div class="col py-1 px-1">
+                        <img src="/img/logo_twitter.png" class="img-fluid menu-icon image-shadow" alt="">
+                    </div>
+                    <div class="col py-1 px-1">
+                        <img src="/img/logo_mail.png" class="img-fluid menu-icon image-shadow" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="/js/switch_color_button_catalog.js"></script>
+</body>
+</html>

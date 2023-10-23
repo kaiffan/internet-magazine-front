@@ -1,0 +1,21 @@
+const plus_button = document.getElementById('btn_plus');
+const minus_button = document.getElementById('btn_minus');
+const count_product_area = document.getElementById('count_product');
+
+let count_product = 0;
+
+function update_count_product(value) {
+    minus_button.disabled = count_product === 0;
+    count_product += value;
+    count_product_area.textContent = count_product;
+}
+
+plus_button.addEventListener('click', () => {
+    update_count_product(1);
+});
+
+minus_button.addEventListener('click', () => {
+    if (count_product > 0) {
+        update_count_product(-1);
+    }
+})
