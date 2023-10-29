@@ -11,7 +11,7 @@
 <header class="py-3 main-header">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-1">
+            <div class="col-1" href='main_page.html'>
                 <img src="/img/logo_company.png" class="img-fluid" alt="logo">
             </div>
             <a class="col-1 text-center">
@@ -32,7 +32,7 @@
             <a class="col-1 text-center">
                 <img src="/img/logo_favorite.png" class="img-fluid menu-icon image-shadow" alt="">
             </a>
-            <a class="col-1 text-center">
+            <a class="col-1 text-center" href="basket_page.html">
                 <img src="/img/logo_cart.png" class="img-fluid menu-icon image-shadow" alt="">
             </a>
         </div>
@@ -223,6 +223,27 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="chat" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Чат DNS</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body text-center" id="be">
+            </div>
+            <div class="modal-footer d-flex align-items-center">
+                <input type="text" name="" id="chatInput">
+                <button class="btn btn-primary" onclick="send()">Отправить</button>
+            </div>
+        </div>
+    </div>
+</div>
+<button class="btn chat-bt open-button" data-bs-toggle="modal" data-bs-target="#chat">
+    <img src="/img/arrow_up.png" alt="" class="icons">
+</button>
+
 <footer class="footer mt-auto py-2 text-black">
     <div class="container">
         <div class="row">
@@ -285,6 +306,8 @@
         </div>
     </div>
 </footer>
+<script src="chatbot.js"></script>
 <script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </body>
 </html>
