@@ -1,6 +1,6 @@
-const plus_button = document.getElementById('btn_plus');
-const minus_button = document.getElementById('btn_minus');
-const count_product_area = document.getElementById('count_product');
+const plus_button = document.getElementsByClassName('btn_plus');
+const minus_button = document.getElementsByClassName('btn_minus');
+const count_product_area = document.getElementsByClassName('count_product');
 
 let count_product = 0;
 
