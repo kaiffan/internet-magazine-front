@@ -85,3 +85,12 @@
 .catalog-menu {
     height: 100%;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.content {
+    min-height: calc(100vh - 80px);
+    background-color: var(--back-color);
+}

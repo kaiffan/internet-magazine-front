@@ -14,7 +14,7 @@
             <div class="col-1" href='main_page.html'>
                 <img src="/img/logo_company.png" class="img-fluid" alt="logo">
             </div>
-            <a class="col-1 text-center">
+            <a class="col-1 text-center" href="catalog_page.html">
                 <img src="/img/logo_catalog.png" class="img-fluid menu-icon image-shadow" alt="">
             </a>
             <a class="col-1 text-center">
@@ -40,7 +40,7 @@
 </header>
 <div class="content">
     <div class="container catalog_content">
-        <div class="row">
+        <div class="row mb-3">
             <form class="col-3 d-flex mt-2">
                 <input class="form-control search-input-catalog" type="search" placeholder="Поиск по категории">
                 <button class="bg-transparent border-0 search-button" type="submit">
@@ -75,6 +75,75 @@
                         <img src="/img/logo_table.png" alt="">
                     </button>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <aside class="content-background p-2 left-sidebar-filters-wrapper">
+                    <form class="d-flex">
+                        <input class="form-control search-input" type="search" placeholder="Поиск фильтров">
+                        <button class="bg-transparent border-0 search-button" type="submit">
+                            <img src="/img/logo_search.png">
+                        </button>
+                    </form>
+                    <div class="filter-card">
+                        <button class="btn d-inline-flex align-items-center rounded collapsed-btn px-0 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#priceFilter" aria-expanded="true" aria-controls="priceFilter">Наличие в магазинах</button>
+                        <div class="show" id="magazine">
+                            <ul class="list-unstyled mt-1 filter-content">
+                                <li><label class="check-outline"><input type="checkbox" name=""><span>В наличии</span></label></li>
+                                <li><label class="check-outline"><input type="checkbox" name=""><span>Под заказ</span></label></li>
+                                <li><label class="check-outline"><input type="checkbox" name=""><span>Отсутствует в продаже</span></label></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filter-card">
+                        <button class="btn d-inline-flex align-items-center rounded collapsed-btn px-0 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#screenFilter" aria-expanded="true" aria-controls="screenFilter">Цена</button>
+                        <div class="show" id="screenFilter">
+                            <div class="d-flex mt-1 mb-2">
+                                <input class="form-control me-1" type="text" name="" id="from" placeholder="От">
+                                <input class="form-control ms-1" type="text" name="" id="to" placeholder="До">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-card">
+                        <button class="btn d-inline-flex align-items-center rounded collapsed-btn px-0 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#memoryValue" aria-expanded="true" aria-controls="memoryValue">Цена</button>
+                        <div class="show" id="memoryValue">
+                            <ul class="list-unstyled mt-1 filter-content">
+                                <li><label class="check-outline"><input type="checkbox" name=""><span>8ГБ</span></label></li>
+                                <li><label class="check-outline"><input type="checkbox" name=""><span>16ГБ</span></label></li>
+                                <li><label class="check-outline"><input type="checkbox" name=""><span>32ГБ</span></label></li>
+                                <li><label class="check-outline"><input type="checkbox" name=""><span>64ГБ</span></label></li>
+                                <li><label class="check-outline"><input type="checkbox" name=""><span>128ГБ</span></label></li>
+                                <li><label class="check-outline"><input type="checkbox" name=""><span>256ГБ</span></label></li>
+                                <li><label class="check-outline"><input type="checkbox" name=""><span>512ГБ</span></label></li>
+                                <li><label class="check-outline"><input type="checkbox" name=""><span>1024ГБ</span></label></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filter-card">
+                        <button class="btn d-inline-flex align-items-center rounded collapsed-btn px-0 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#memoryValue" aria-expanded="true" aria-controls="memoryValue">Производитель</button>
+                        <div class="show" id="prod">
+                            <ul class="list-unstyled mt-1 filter-content">
+                                <form class="d-flex">
+                                    <input class="form-control search-input" type="search" placeholder="Поиск">
+                                    <button class="bg-transparent border-0 search-button" type="submit">
+                                        <img src="/img/logo_search.png">
+                                    </button>
+                                </form>
+                                <ul class="list-unstyled mt-1 filter-content">
+                                    <li><label class="check-outline"><input type="checkbox" name=""><span>Apple</span></label></li>
+                                    <li><label class="check-outline"><input type="checkbox" name=""><span>Asus</span></label></li>
+                                    <li><label class="check-outline"><input type="checkbox" name=""><span>Black Fox</span></label></li>
+                                    <li><label class="check-outline"><input type="checkbox" name=""><span>Google</span></label></li>
+                                    <li><label class="check-outline"><input type="checkbox" name=""><span>HONOR</span></label></li>
+                                    <li><label class="check-outline"><input type="checkbox" name=""><span>Huawei</span></label></li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <button class="w-100 button-secondary-filled">Применить</button>
+                    <button class="w-100 button-secondary mt-2">Сбросить</button>
+                </aside>
             </div>
         </div>
     </div>
@@ -142,6 +211,6 @@
     </div>
 </footer>
 <script src="/bootstrap/js/bootstrap.min.js"></script>
-
+<script src="/js/switch_color_button_catalog.js"></script>
 </body>
 </html>
