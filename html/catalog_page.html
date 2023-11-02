@@ -1,216 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/catalog_page.css" rel="stylesheet">
-    <title>Catalog</title>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/catalog_page.css" rel="stylesheet">
+	<link href="/css/item_page.css" rel="stylesheet">
+	<title>Catalog</title>
+	<style>
+		.card {
+			background-color: orange;
+			border:2px solid white;
+		}
+	</style>
 </head>
 <body>
-<header class="py-3 main-header">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-1" href='main_page.html'>
-                <img src="/img/logo_company.png" class="img-fluid" alt="logo">
-            </div>
-            <a class="col-1 text-center" href="catalog_page.html">
-                <img src="/img/logo_catalog.png" class="img-fluid menu-icon image-shadow" alt="">
-            </a>
-            <a class="col-1 text-center">
-                <img src="/img/logo_location.png" class="img-fluid menu-icon image-shadow" alt="">
-            </a>
-            <form class="col-6 d-flex">
-                <input class="form-control search-input" type="search" placeholder="Поиск...">
-                <button class="bg-transparent border-0 search-button" type="submit">
-                    <img src="/img/logo_search.png" alt="">
-                </button>
-            </form>
-            <a class="col-1 text-center">
-                <img src="/img/logo_user.png" class="img-fluid menu-icon image-shadow" alt="">
-            </a>
-            <a class="col-1 text-center">
-                <img src="/img/logo_favorite.png" class="img-fluid menu-icon image-shadow" alt="">
-            </a>
-            <a class="col-1 text-center" href="basket_page.html">
-                <img src="/img/logo_cart.png" class="img-fluid menu-icon image-shadow" alt="">
-            </a>
-        </div>
-    </div>
+<header class="py-3 main-header d-lg-none">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-2">
+				<a aria-expanded="false" data-toggle="collapse" href="#mobileMenu" role="button"><img alt="Burger Menu" class="img-fluid" src="/img/logo_catalog.png"></a>
+			</div>
+			<div class="col-8 text-center compshop">
+				CompShop
+			</div>
+			<div class="col-2"><img alt="Company Logo" class="img-fluid" src="/img/logo_company.png"></div>
+		</div>
+	</div>
 </header>
+<header class="py-3 main-header d-none d-lg-block">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-1">
+				<a href="main_page.html">
+					<img alt="logo" class="img-fluid" src="/img/logo_company.png">
+				</a>
+			</div>
+			<a class="col-1 text-center" href="catalog_page.html">
+				<img alt="Catalog" class="img-fluid menu-icon image-shadow" src="/img/logo_catalog.png">
+			</a>
+			<!-- Добавляем кнопку для открытия бургер-меню на мобильных устройствах -->
+			<div class="col-1 text-center">
+				<button class="btn" id="burger-button">
+					<img
+							alt="Location"
+							class="img-fluid menu-icon image-shadow"
+							src="/img/logo_location.png"
+					/>
+				</button>
+			</div>
+			<form class="col-6 d-flex">
+				<input
+						class="form-control search-input"
+						placeholder="Поиск..."
+						type="search"
+				/>
+				<button class="bg-transparent border-0 search-button" type="submit">
+					<img alt="Search" src="/img/logo_search.png" />
+				</button>
+			</form>
+			<a class="col-1 text-center"
+			><img
+					alt="User"
+					class="img-fluid menu-icon image-shadow"
+					src="/img/logo_user.png"
+			/></a>
+			<a class="col-1 text-center"
+			><img
+					alt="Favorite"
+					class="img-fluid menu-icon image-shadow"
+					src="/img/logo_favorite.png"
+			/></a>
+			<a class="col-1 text-center" href="basket_page.html"
+			><img
+					alt="Cart"
+					class="img-fluid menu-icon image-shadow"
+					src="/img/logo_cart.png"
+			/></a>
+		</div>
+	</div>
+</header>
+<div class="d-lg-none">
+	<div class="collapse bg-orange dropdown-menu-bottom" id="mobileMenu">
+		<div class="d-flex align-items-center py-2">
+			<img alt="User" class="img-fluid pr-2" src="/img/logo_user.png"> <a href="#">Кабинет пользователя</a>
+		</div>
+		<div class="d-flex align-items-center py-2">
+			<img alt="Catalog" class="img-fluid pr-2" src="/img/logo_catalog.png"> <a href="catalog_page.html">Каталог</a>
+		</div>
+		<div class="d-flex align-items-center py-2">
+			<img alt="Cart" class="img-fluid pr-2" src="/img/logo_cart.png"> <a href="basket_page.html">Корзина</a>
+		</div>
+		<div class="d-flex align-items-center py-2">
+			<img alt="Favorite" class="img-fluid pr-2" src="/img/logo_favorite.png"> <a href="#">Избранное</a>
+		</div>
+	</div>
+</div>
 <div class="content">
-    <div class="container catalog_content">
-        <div class="row mb-3">
-            <form class="col-3 d-flex mt-2">
-                <input class="form-control search-input-catalog" type="search" placeholder="Поиск по категории">
-                <button class="bg-transparent border-0 search-button" type="submit">
-                    <img src="/img/logo_search.png" alt="">
-                </button>
-            </form>
-            <div class="d-flex col mt-2 head_setting_group_sort">
-                <div class="d-flex col align-items-center">
-                    <h6>Сортировать по:</h6>
-                    <select class="form-select form-select-sm form_select_catalog_head ms-2" aria-label="Пример выбора по умолчанию">
-                        <option selected>сначала популярные</option>
-                        <option value="1">сначала недорогие</option>
-                        <option value="2">сначала дорогие</option>
-                        <option value="3">сначала с лучшей оценке</option>
-                    </select>
-                </div>
-                <div class=" d-flex col align-items-center">
-                    <h6>Группировка:</h6>
-                    <select class="d-flex form-select form-select-sm form_select_catalog_head ms-2" aria-label="Пример выбора по умолчанию">
-                        <option selected>отсутствует</option>
-                        <option value="1">по наличию</option>
-                        <option value="2">по производителю</option>
-                        <option value="3">по встроенной памяти</option>
-                        <option value="4">по диагонали экрана</option>
-                    </select>
-                </div>
-                <div class="d-flex col justify-content-end mt-1 mb-1">
-                    <button class="btn btn_not_active_head_setting" id="btn_not_active_head_setting" type="submit">
-                        <img src="/img/logo_rows.png" alt="">
-                    </button>
-                    <button class="btn btn_active_head_setting" id="btn_active_head_setting" type="submit">
-                        <img src="/img/logo_table.png" alt="">
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-3">
-                <aside class="content-background p-2 left-sidebar-filters-wrapper">
-                    <form class="d-flex">
-                        <input class="form-control search-input" type="search" placeholder="Поиск фильтров">
-                        <button class="bg-transparent border-0 search-button" type="submit">
-                            <img src="/img/logo_search.png">
-                        </button>
-                    </form>
-                    <div class="filter-card">
-                        <button class="btn d-inline-flex align-items-center rounded collapsed-btn px-0 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#priceFilter" aria-expanded="true" aria-controls="priceFilter">Наличие в магазинах</button>
-                        <div class="show" id="magazine">
-                            <ul class="list-unstyled mt-1 filter-content">
-                                <li><label class="check-outline"><input type="checkbox" name=""><span>В наличии</span></label></li>
-                                <li><label class="check-outline"><input type="checkbox" name=""><span>Под заказ</span></label></li>
-                                <li><label class="check-outline"><input type="checkbox" name=""><span>Отсутствует в продаже</span></label></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="filter-card">
-                        <button class="btn d-inline-flex align-items-center rounded collapsed-btn px-0 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#screenFilter" aria-expanded="true" aria-controls="screenFilter">Цена</button>
-                        <div class="show" id="screenFilter">
-                            <div class="d-flex mt-1 mb-2">
-                                <input class="form-control me-1" type="text" name="" id="from" placeholder="От">
-                                <input class="form-control ms-1" type="text" name="" id="to" placeholder="До">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="filter-card">
-                        <button class="btn d-inline-flex align-items-center rounded collapsed-btn px-0 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#memoryValue" aria-expanded="true" aria-controls="memoryValue">Цена</button>
-                        <div class="show" id="memoryValue">
-                            <ul class="list-unstyled mt-1 filter-content">
-                                <li><label class="check-outline"><input type="checkbox" name=""><span>8ГБ</span></label></li>
-                                <li><label class="check-outline"><input type="checkbox" name=""><span>16ГБ</span></label></li>
-                                <li><label class="check-outline"><input type="checkbox" name=""><span>32ГБ</span></label></li>
-                                <li><label class="check-outline"><input type="checkbox" name=""><span>64ГБ</span></label></li>
-                                <li><label class="check-outline"><input type="checkbox" name=""><span>128ГБ</span></label></li>
-                                <li><label class="check-outline"><input type="checkbox" name=""><span>256ГБ</span></label></li>
-                                <li><label class="check-outline"><input type="checkbox" name=""><span>512ГБ</span></label></li>
-                                <li><label class="check-outline"><input type="checkbox" name=""><span>1024ГБ</span></label></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="filter-card">
-                        <button class="btn d-inline-flex align-items-center rounded collapsed-btn px-0 fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#memoryValue" aria-expanded="true" aria-controls="memoryValue">Производитель</button>
-                        <div class="show" id="prod">
-                            <ul class="list-unstyled mt-1 filter-content">
-                                <form class="d-flex">
-                                    <input class="form-control search-input" type="search" placeholder="Поиск">
-                                    <button class="bg-transparent border-0 search-button" type="submit">
-                                        <img src="/img/logo_search.png">
-                                    </button>
-                                </form>
-                                <ul class="list-unstyled mt-1 filter-content">
-                                    <li><label class="check-outline"><input type="checkbox" name=""><span>Apple</span></label></li>
-                                    <li><label class="check-outline"><input type="checkbox" name=""><span>Asus</span></label></li>
-                                    <li><label class="check-outline"><input type="checkbox" name=""><span>Black Fox</span></label></li>
-                                    <li><label class="check-outline"><input type="checkbox" name=""><span>Google</span></label></li>
-                                    <li><label class="check-outline"><input type="checkbox" name=""><span>HONOR</span></label></li>
-                                    <li><label class="check-outline"><input type="checkbox" name=""><span>Huawei</span></label></li>
-                                </ul>
-                            </ul>
-                        </div>
-                    </div>
-                    <button class="w-100 button-secondary-filled">Применить</button>
-                    <button class="w-100 button-secondary mt-2">Сбросить</button>
-                </aside>
-            </div>
-        </div>
-    </div>
+	<div class="container catalog_content">
+		<div class="row mb-3">
+			<form class="col-md-3 col-12 d-flex mt-2" style="overflow: hidden;">
+				<div class="input-group">
+					<input class="form-control search-input" placeholder="Поиск" type="search"> <button class="bg-transparent border-0 search-button" style="height: 20px;" type="submit"><img src="/img/logo_search.png"></button>
+				</div>
+			</form>
+			<div class="col-md-9 col-12 mt-2 head_setting_group_sort">
+				<div class="row align-items-center">
+					<div class="col-md-3 col-6">
+						<h6>Сортировать по:</h6>
+						<select aria-label="Пример выбора по умолчанию" class="form-select form-select-sm form_select_catalog_head">
+							<option selected>сначала популярные</option>
+							<option value="1">сначала недорогие</option>
+							<option value="2">сначала дорогие</option>
+							<option value="3">сначала с лучшей оценке</option>
+						</select>
+					</div>
+
+					<div class="col-md-3 col-6">
+						<h6>Группировка:</h6>
+						<select aria-label="Пример выбора по умолчанию" class="form-select form-select-sm form_select_catalog_head">
+							<option selected>отсутствует</option>
+							<option value="1">по наличию</option>
+							<option value="2">по производителю</option>
+							<option value="3">по встроенной памяти</option>
+							<option value="4">по диагонали экрана</option>
+						</select>
+					</div>
+
+					<div class="col-md-3 d-none d-md-block"></div>
+
+					<div class="col-md-3 col-12 text-md-end">
+						<button class="btn btn_not_active_head_setting" id="btn_not_active_head_setting" type="submit">
+							<img alt="" src="/img/logo_rows.png">
+						</button>
+						<button class="btn btn_active_head_setting" id="btn_active_head_setting" type="submit">
+							<img alt="" src="/img/logo_table.png">
+						</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-12">
+				<aside class="content-background p-2 left-sidebar-filters-wrapper">
+					<div class="input-group mb-3">
+						<input class="form-control search-input" placeholder="Поиск фильтров" type="search"> <button class="bg-transparent border-0 search-button" type="submit"><img src="/img/logo_search.png"></button>
+					</div>
+					<div class="filter-card">
+						<button aria-controls="priceFilter" aria-expanded="true" class="btn d-inline-flex align-items-center rounded collapsed-btn px-0 fw-bold" data-bs-target="#priceFilter" data-bs-toggle="collapse" type="button">Наличие в магазинах</button>
+						<div class="show" id="magazine">
+							<ul class="list-unstyled mt-3 filter-content">
+								<li><label class="check-outline"><input name="" type="checkbox"><span>В наличии</span></label></li>
+								<li><label class="check-outline"><input name="" type="checkbox"><span>Под заказ</span></label></li>
+								<li><label class="check-outline"><input name="" type="checkbox"><span>Отсутствует в продаже</span></label></li>
+							</ul>
+						</div>
+					</div>
+					<div class="filter-card">
+						<button aria-controls="screenFilter" aria-expanded="true" class="btn d-inline-flex align-items-center rounded collapsed-btn px-0 fw-bold" data-bs-target="#screenFilter" data-bs-toggle="collapse" type="button">Внутренняя память</button>
+						<div class="show" id="screenFilter">
+							<div class="d-flex mt-1 mb-2">
+								<input class="form-control me-1" id="from" name="" placeholder="От" type="text"> <input class="form-control ms-1" id="to" name="" placeholder="До" type="text">
+							</div>
+						</div>
+					</div>
+					<div class="filter-card">
+						<button aria-controls="memoryValue" aria-expanded="true" class="btn d-inline-flex align-items-center rounded collapsed-btn px-0 fw-bold" data-bs-target="#memoryValue" data-bs-toggle="collapse" type="button">Цена</button>
+						<div class="show" id="memoryValue">
+							<ul class="list-unstyled mt-1 filter-content">
+								<li><label class="check-outline"><input name="" type="checkbox"><span>8ГБ</span></label></li>
+								<li><label class="check-outline"><input name="" type="checkbox"><span>16ГБ</span></label></li>
+								<li><label class="check-outline"><input name="" type="checkbox"><span>32ГБ</span></label></li>
+								<li><label class="check-outline"><input name="" type="checkbox"><span>64ГБ</span></label></li>
+								<li><label class="check-outline"><input name="" type="checkbox"><span>128ГБ</span></label></li>
+								<li><label class="check-outline"><input name="" type="checkbox"><span>256ГБ</span></label></li>
+								<li><label class="check-outline"><input name="" type="checkbox"><span>512ГБ</span></label></li>
+								<li><label class="check-outline"><input name="" type="checkbox"><span>1024ГБ</span></label></li>
+							</ul>
+						</div>
+					</div>
+					<div class="filter-card">
+						<button aria-controls="prodValue" aria-expanded="true" class="btn d-inline-flex align-items-center rounded collapsed-btn px-0 fw-bold" data-bs-target="#memoryValue" data-bs-toggle="collapse" type="button">Производитель</button>
+						<div class="show" id="prod">
+							<div class="list-unstyled mt-1 filter-content" style="margin-left: 2em; overflow-y: hidden;">
+								<form class="mb-3">
+									<div class="input-group">
+										<input class="form-control search-input" placeholder="Поиск" type="search">
+										<button class="bg-transparent border-0 search-button" type="submit"><img src="/img/logo_search.png"></button>
+									</div>
+								</form>
+								<ul class="list-unstyled mt-1 filter-content">
+									<li><label class="check-outline"><input name="" type="checkbox"><span>Apple</span></label></li>
+									<li><label class="check-outline"><input name="" type="checkbox"><span>Asus</span></label></li>
+									<li><label class="check-outline"><input name="" type="checkbox"><span>Black Fox</span></label></li>
+									<li><label class="check-outline"><input name="" type="checkbox"><span>Google</span></label></li>
+									<li><label class="check-outline"><input name="" type="checkbox"><span>HONOR</span></label></li>
+									<li><label class="check-outline"><input name="" type="checkbox"><span>Huawei</span></label></li>
+								</ul>
+							</div>
+						</div>
+					</div><button class="w-100 button-secondary-filled">Применить</button> <button class="w-100 button-secondary mt-2">Сбросить</button>
+				</aside>
+			</div>
+			<div class="col-md-9 col-12 d-flex justify-content-center flex-wrap" id="card-container"></div>
+		</div>
+		<div class="text-center mt-4 custom-pagination" id="pagination-container"></div>
+	</div>
 </div>
 <footer class="footer mt-auto py-2 text-black">
-    <div class="container">
-        <div class="row">
-            <div class="col py-3">
-                <img src="/img/logo_company.png" class="img-fluid menu-icon image-shadow" alt="">
-                <h6>CompShop</h6>
-            </div>
-            <div class="col">
-                <h5 class="line">CompShop</h5>
-                <a class="nav-link p-1" href="">О компании</a>
-                <a class="nav-link p-1" href="">Новости</a>
-                <a class="nav-link p-1" href="">Партнерам</a>
-                <a class="nav-link p-1" href="">Для прессы</a>
-            </div>
-            <div class="col">
-                <h5 class="line">Покупателям</h5>
-                <a class="nav-link p-1" href="">Бонусная программа</a>
-                <a class="nav-link p-1" href="">Как оформить заказ</a>
-                <a class="nav-link p-1" href="">Пункты выдачи</a>
-                <a class="nav-link p-1" href="">Персональные данные</a>
-            </div>
-            <div class="col">
-                <h5 class="line">Услуги</h5>
-                <a class="nav-link p-1" href="">Доставка</a>
-                <a class="nav-link p-1" href="">Самовывоз</a>
-                <a class="nav-link p-1" href="">Сервис-центры</a>
-            </div>
-            <div class="col">
-                <h5 class="line">Помощь</h5>
-                <a class="nav-link p-1" href="">Способы оплаты</a>
-                <a class="nav-link p-1" href="">Как оформить заказ</a>
-                <a class="nav-link p-1" href="">Юр. лицам</a>
-                <a class="nav-link p-1" href="">Обмен, возврат, гарантия</a>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <h5 class="line">Соц.сети</h5>
-                    <div class="col py-2 px-1">
-                        <img src="/img/logo_vk.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-2 px-1">
-                        <img src="/img/logo_instagram.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-2 px-1">
-                        <img src="/img/logo_youtube.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col py-1 px-1">
-                        <img src="/img/logo_share.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-1 px-1">
-                        <img src="/img/logo_twitter.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-1 px-1">
-                        <img src="/img/logo_mail.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col py-3">
+				<img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_company.png">
+				<h6>CompShop</h6>
+			</div>
+			<div class="col">
+				<h5 class="line">CompShop</h5><a class="nav-link p-1" href="">О компании</a> <a class="nav-link p-1" href="">Новости</a> <a class="nav-link p-1" href="">Партнерам</a> <a class="nav-link p-1" href="">Для прессы</a>
+			</div>
+			<div class="col">
+				<h5 class="line">Покупателям</h5><a class="nav-link p-1" href="">Бонусная программа</a> <a class="nav-link p-1" href="">Как оформить заказ</a> <a class="nav-link p-1" href="">Пункты выдачи</a> <a class="nav-link p-1" href="">Персональные данные</a>
+			</div>
+			<div class="col">
+				<h5 class="line">Услуги</h5><a class="nav-link p-1" href="">Доставка</a> <a class="nav-link p-1" href="">Самовывоз</a> <a class="nav-link p-1" href="">Сервис-центры</a>
+			</div>
+			<div class="col">
+				<h5 class="line">Помощь</h5><a class="nav-link p-1" href="">Способы оплаты</a> <a class="nav-link p-1" href="">Как оформить заказ</a> <a class="nav-link p-1" href="">Юр. лицам</a> <a class="nav-link p-1" href="">Обмен, возврат, гарантия</a>
+			</div>
+			<div class="col">
+				<div class="row">
+					<h5 class="line">Соц.сети</h5>
+					<div class="col py-2 px-1"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_vk.png"></div>
+					<div class="col py-2 px-1"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_instagram.png"></div>
+					<div class="col py-2 px-1"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_youtube.png"></div>
+				</div>
+				<div class="row">
+					<div class="col py-1 px-1"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_share.png"></div>
+					<div class="col py-1 px-1"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_twitter.png"></div>
+					<div class="col py-1 px-1"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_mail.png"></div>
+				</div>
+			</div>
+		</div>
+	</div>
 </footer>
-<script src="/bootstrap/js/bootstrap.min.js"></script>
-<script src="/js/switch_color_button_catalog.js"></script>
+<script src="/js/constants/constants.js">
+</script>
+<script src="/js/paggination.js">
+</script>
+<script src="/js/switch_color_button_catalog.js">
+</script>
+<script src="/bootstrap/js/bootstrap.min.js">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1do4A+gf8k5l7l4lMz4i3WDQn1Z7y/JonasIUNsobEU082/s1/FfJ4U" crossorigin="anonymous"></script>
+<script src="/js/burger.js">
+</script>
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-xl">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="productModalLabel">Название продукта</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-md-6 text-center">
+						<img src="#" id="productImage" width="400px" alt="Product Image" class="img-fluid mb-3">
+					</div>
+					<div class="col-md-6">
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11; right: 0; bottom: 0;">
+	<div id="addToCartToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+		<div class="toast-header">
+			<strong class="me-auto">Уведомление</strong>
+			<button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+		</div>
+		<div class="toast-body">
+			Товар успешно добавлен в корзину!
+		</div>
+	</div>
+</div>
+
 </body>
 </html>

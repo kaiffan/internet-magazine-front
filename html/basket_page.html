@@ -1,342 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/basket_page.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/basket_page.css" rel="stylesheet" />
+    <link href="/css/item_page.css" rel="stylesheet" />
     <title>Cart</title>
-</head>
-<body>
-<header class="py-3 main-header">
-    <div class="container">
+    <style></style>
+  </head>
+  <body>
+    <header class="py-3 main-header d-lg-none">
+      <div class="container">
         <div class="row align-items-center">
-            <div class="col-1">
-                <a href="main_page.html"><img src="/img/logo_company.png" class="img-fluid" alt="logo"></a>
-            </div>
-            <a class="col-1 text-center" href="catalog_page.html">
-                <img src="/img/logo_catalog.png" class="img-fluid menu-icon image-shadow" alt="">
+          <div class="col-2">
+            <a
+              aria-expanded="false"
+              data-toggle="collapse"
+              href="#mobileMenu"
+              role="button"
+              ><img
+                alt="Burger Menu"
+                class="img-fluid"
+                src="/img/logo_catalog.png"
+            /></a>
+          </div>
+          <div class="col-8 text-center compshop">CompShop</div>
+          <div class="col-2">
+            <a
+            href="main_page.html">
+              <img
+                      alt="Company Logo"
+                      class="img-fluid"
+                      src="/img/logo_company.png"
+              />
             </a>
-            <a class="col-1 text-center">
-                <img src="/img/logo_location.png" class="img-fluid menu-icon image-shadow" alt="">
-            </a>
-            <form class="col-6 d-flex">
-                <input class="form-control search-input" type="search" placeholder="Поиск...">
-                <button class="bg-transparent border-0 search-button" type="submit">
-                    <img src="/img/logo_search.png" alt="">
-                </button>
-            </form>
-            <a class="col-1 text-center">
-                <img src="/img/logo_user.png" class="img-fluid menu-icon image-shadow" alt="">
-            </a>
-            <a class="col-1 text-center">
-                <img src="/img/logo_favorite.png" class="img-fluid menu-icon image-shadow" alt="">
-            </a>
-            <a class="col-1 text-center">
-                <img src="/img/logo_cart.png" class="img-fluid menu-icon image-shadow" alt="">
-            </a>
+          </div>
         </div>
+      </div>
+    </header>
+    <header class="py-3 main-header d-none d-lg-block">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-1">
+            <a href="main_page.html">
+              <img alt="logo" class="img-fluid" src="/img/logo_company.png">
+            </a>
+          </div>
+          <a class="col-1 text-center" href="catalog_page.html">
+            <img alt="Catalog" class="img-fluid menu-icon image-shadow" src="/img/logo_catalog.png">
+          </a>
+          <!-- Добавляем кнопку для открытия бургер-меню на мобильных устройствах -->
+          <div class="col-1 text-center">
+            <button class="btn" id="burger-button">
+              <img
+                alt="Location"
+                class="img-fluid menu-icon image-shadow"
+                src="/img/logo_location.png"
+              />
+            </button>
+          </div>
+          <form class="col-6 d-flex">
+            <input
+              class="form-control search-input"
+              placeholder="Поиск..."
+              type="search"
+            />
+            <button class="bg-transparent border-0 search-button" type="submit">
+              <img alt="Search" src="/img/logo_search.png" />
+            </button>
+          </form>
+          <a class="col-1 text-center"
+            ><img
+              alt="User"
+              class="img-fluid menu-icon image-shadow"
+              src="/img/logo_user.png"
+          /></a>
+          <a class="col-1 text-center"
+            ><img
+              alt="Favorite"
+              class="img-fluid menu-icon image-shadow"
+              src="/img/logo_favorite.png"
+          /></a>
+          <a class="col-1 text-center" href="basket_page.html"
+            ><img
+              alt="Cart"
+              class="img-fluid menu-icon image-shadow"
+              src="/img/logo_cart.png"
+          /></a>
+        </div>
+      </div>
+    </header>
+    <div class="d-lg-none">
+      <div class="collapse bg-orange dropdown-menu-bottom" id="mobileMenu">
+        <div class="d-flex align-items-center py-2">
+          <img alt="User" class="img-fluid pr-2" src="/img/logo_user.png" />
+          <a href="#">Кабинет пользователя</a>
+        </div>
+        <div class="d-flex align-items-center py-2">
+          <img
+            alt="Catalog"
+            class="img-fluid pr-2"
+            src="/img/logo_catalog.png"
+          />
+          <a href="catalog_page.html">Каталог</a>
+        </div>
+        <div class="d-flex align-items-center py-2">
+          <img alt="Cart" class="img-fluid pr-2" src="/img/logo_cart.png" />
+          <a href="basket_page.html">Корзина</a>
+        </div>
+        <div class="d-flex align-items-center py-2">
+          <img
+            alt="Favorite"
+            class="img-fluid pr-2"
+            src="/img/logo_favorite.png"
+          />
+          <a href="#">Избранное</a>
+        </div>
+      </div>
     </div>
-</header>
-<div class="content">
-    <div class="container content_basket">
-        <div class="d-flex col justify-content-between pt-3 product_in_basket_1">
-            <div class="col-1">
-                <img src="/img/two_level_image%201.png" alt="">
-            </div>
-            <div class="col-11">
-                <h5>Смартфон Iphone 15 Pro Max 256Гб</h5>
-                <div class="d-flex col">
-                    <div class="d-flex col-2 plus_minus_item align-items-center justify-content-center">
-                        <div class="">
-                            <button class="btn btn_minus" type="submit">
-                                <img src="/img/minus.png" alt="">
-                            </button>
-                        </div>
-                        <div class="mt-2">
-                            <span class="count_product">0</span>
-                        </div>
-                        <div class="">
-                            <button class="btn btn_plus" type="submit">
-                                <img src="/img/plus.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-1">
-                        <button class="btn" type="submit">
-                            <img src="/img/delete.png" alt="">
-                        </button>
-                    </div>
-                    <div class="col">
-                        <h5>Дополнительная гарантия:</h5>
-                        <button type="button" class="btn btn-secondary btn_model">
-                            Нет 0₽
-                        </button>
-                        <button type="button" class="btn btn-secondary btn_active">
-                            +12 мес. 650₽
-                        </button>
-                        <button type="button" class="btn btn-secondary btn_model">
-                            +24 мес. 1200₽
-                        </button>
-                    </div>
-                    <div class="d-flex col justify-content-end align-items-center">
-                        <h5>199 999₽</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="d-flex col justify-content-between align-items-end">
-            <h5>В наличии:&nbsp<u>в 2 магазинах</u></h5>
-            <button class="btn" type="submit">
-                <img src="/img/logo_favorite.png" alt="">
-            </button>
-        </div>
-        <hr class="p-0 mx-0 my-0"/>
-        <div class="d-flex col justify-content-between pt-3">
-            <div class="col-1">
-                <img src="/img/two_level_image%201.png" alt="">
-            </div>
-            <div class="col-11">
-                <h5>Смартфон Iphone 15 Pro Max 256Гб</h5>
-                <div class="d-flex col">
-                    <div class="d-flex col-2 plus_minus_item align-items-center justify-content-center">
-                        <div class="">
-                            <button class="btn btn_minus" type="submit">
-                                <img src="/img/minus.png" alt="">
-                            </button>
-                        </div>
-                        <div class="mt-2">
-                            <span class="count_product">0</span>
-                        </div>
-                        <div class="">
-                            <button class="btn btn_plus" type="submit">
-                                <img src="/img/plus.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-1">
-                        <button class="btn" type="submit">
-                            <img src="/img/delete.png" alt="">
-                        </button>
-                    </div>
-                    <div class="col">
-                        <h5>Дополнительная гарантия:</h5>
-                        <button type="button" class="btn btn-secondary btn_model">
-                            Нет 0₽
-                        </button>
-                        <button type="button" class="btn btn-secondary btn_active">
-                            +12 мес. 650₽
-                        </button>
-                        <button type="button" class="btn btn-secondary btn_model">
-                            +24 мес. 1200₽
-                        </button>
-                    </div>
-                    <div class="d-flex col justify-content-end align-items-center">
-                        <h5>199 999₽</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="d-flex col justify-content-between align-items-end">
-            <h5>В наличии:&nbsp<u>в 2 магазинах</u></h5>
-            <button class="btn" type="submit">
-                <img src="/img/logo_favorite.png" alt="">
-            </button>
-        </div>
-        <hr class="p-0 mx-0 my-0"/>
-        <div class="d-flex col justify-content-between pt-3">
-            <div class="col-1">
-                <img src="/img/two_level_image%201.png" alt="">
-            </div>
-            <div class="col-11">
-                <h5>Смартфон Iphone 15 Pro Max 256Гб</h5>
-                <div class="d-flex col">
-                    <div class="d-flex col-2 plus_minus_item align-items-center justify-content-center">
-                        <div class="">
-                            <button class="btn btn_minus" type="submit">
-                                <img src="/img/minus.png" alt="">
-                            </button>
-                        </div>
-                        <div class="mt-2">
-                            <span class="count_product">0</span>
-                        </div>
-                        <div class="">
-                            <button class="btn btn_plus" type="submit">
-                                <img src="/img/plus.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-1">
-                        <button class="btn" type="submit">
-                            <img src="/img/delete.png" alt="">
-                        </button>
-                    </div>
-                    <div class="col">
-                        <h5>Дополнительная гарантия:</h5>
-                        <button type="button" class="btn btn-secondary btn_model">
-                            Нет 0₽
-                        </button>
-                        <button type="button" class="btn btn-secondary btn_active">
-                            +12 мес. 650₽
-                        </button>
-                        <button type="button" class="btn btn-secondary btn_model">
-                            +24 мес. 1200₽
-                        </button>
-                    </div>
-                    <div class="d-flex col justify-content-end align-items-center">
-                        <h5>199 999₽</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="d-flex col justify-content-between align-items-end">
-            <h5>В наличии:&nbsp<u>в 2 магазинах</u></h5>
-            <button class="btn" type="submit">
-                <img src="/img/logo_favorite.png" alt="">
-            </button>
-        </div>
-        <hr class="p-0 mx-0 my-0"/>
-        <div class="d-flex col justify-content-between pt-3">
-            <div class="col-1">
-                <img src="/img/two_level_image%201.png" alt="">
-            </div>
-            <div class="col-11">
-                <h5>Смартфон Iphone 15 Pro Max 256Гб</h5>
-                <div class="d-flex col">
-                    <div class="d-flex col-2 plus_minus_item align-items-center justify-content-center">
-                        <div class="">
-                            <button class="btn btn_minus" type="submit">
-                                <img src="/img/minus.png" alt="">
-                            </button>
-                        </div>
-                        <div class="mt-2">
-                            <span class="count_product">0</span>
-                        </div>
-                        <div class="">
-                            <button class="btn btn_plus" type="submit">
-                                <img src="/img/plus.png" alt="">
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-1">
-                        <button class="btn" type="submit">
-                            <img src="/img/delete.png" alt="">
-                        </button>
-                    </div>
-                    <div class="col">
-                        <h5>Дополнительная гарантия:</h5>
-                        <button type="button" class="btn btn-secondary btn_model">
-                            Нет 0₽
-                        </button>
-                        <button type="button" class="btn btn-secondary btn_active">
-                            +12 мес. 650₽
-                        </button>
-                        <button type="button" class="btn btn-secondary btn_model">
-                            +24 мес. 1200₽
-                        </button>
-                    </div>
-                    <div class="d-flex col justify-content-end align-items-center">
-                        <h5>199 999₽</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="d-flex col justify-content-between align-items-end">
-            <h5>В наличии:&nbsp<u>в 2 магазинах</u></h5>
-            <button class="btn" type="submit">
-                <img src="/img/logo_favorite.png" alt="">
-            </button>
-        </div>
-        <hr class="p-1 mx-0 my-1"/>
+	<div class="content">
+		<h2 class="text-center">Корзина</h2>
+		<div id="basket-container" class="container content_basket"></div>
+	</div>
+    <footer class="footer mt-auto py-2 text-black">
+      <div class="container">
         <div class="row">
-            <div class="col align-items-center">
-                <h4>Дополнительные услуги:</h4>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
-                    <label class="form-check-label" for="flexCheckDefault1">
-                        Наклейка защитного стекла-350₽
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
-                    <label class="form-check-label" for="flexCheckDefault2">
-                        ТО смартфона-1050₽
-                    </label>
-                </div>
+          <div class="col py-3">
+            <img
+              alt=""
+              class="img-fluid menu-icon image-shadow"
+              src="/img/logo_company.png"
+            />
+            <h6>CompShop</h6>
+          </div>
+          <div class="col">
+            <h5 class="line">CompShop</h5>
+            <a class="nav-link p-1" href="">О компании</a>
+            <a class="nav-link p-1" href="">Новости</a>
+            <a class="nav-link p-1" href="">Партнерам</a>
+            <a class="nav-link p-1" href="">Для прессы</a>
+          </div>
+          <div class="col">
+            <h5 class="line">Покупателям</h5>
+            <a class="nav-link p-1" href="">Бонусная программа</a>
+            <a class="nav-link p-1" href="">Как оформить заказ</a>
+            <a class="nav-link p-1" href="">Пункты выдачи</a>
+            <a class="nav-link p-1" href="">Персональные данные</a>
+          </div>
+          <div class="col">
+            <h5 class="line">Услуги</h5>
+            <a class="nav-link p-1" href="">Доставка</a>
+            <a class="nav-link p-1" href="">Самовывоз</a>
+            <a class="nav-link p-1" href="">Сервис-центры</a>
+          </div>
+          <div class="col">
+            <h5 class="line">Помощь</h5>
+            <a class="nav-link p-1" href="">Способы оплаты</a>
+            <a class="nav-link p-1" href="">Как оформить заказ</a>
+            <a class="nav-link p-1" href="">Юр. лицам</a>
+            <a class="nav-link p-1" href="">Обмен, возврат, гарантия</a>
+          </div>
+          <div class="col">
+            <div class="row">
+              <h5 class="line">Соц.сети</h5>
+              <div class="col py-2 px-1">
+                <img
+                  alt=""
+                  class="img-fluid menu-icon image-shadow"
+                  src="/img/logo_vk.png"
+                />
+              </div>
+              <div class="col py-2 px-1">
+                <img
+                  alt=""
+                  class="img-fluid menu-icon image-shadow"
+                  src="/img/logo_instagram.png"
+                />
+              </div>
+              <div class="col py-2 px-1">
+                <img
+                  alt=""
+                  class="img-fluid menu-icon image-shadow"
+                  src="/img/logo_youtube.png"
+                />
+              </div>
             </div>
-            <div class="d-flex col align-items-center">
-                <div class="col">
-                    <h3>Цена:&nbsp779&nbsp9960 ₽</h3>
-                </div>
-                <button class="btn btn-warning button_buy_cart" type="button">
-                    Купить
-                </button>
+            <div class="row">
+              <div class="col py-1 px-1">
+                <img
+                  alt=""
+                  class="img-fluid menu-icon image-shadow"
+                  src="/img/logo_share.png"
+                />
+              </div>
+              <div class="col py-1 px-1">
+                <img
+                  alt=""
+                  class="img-fluid menu-icon image-shadow"
+                  src="/img/logo_twitter.png"
+                />
+              </div>
+              <div class="col py-1 px-1">
+                <img
+                  alt=""
+                  class="img-fluid menu-icon image-shadow"
+                  src="/img/logo_mail.png"
+                />
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</div>
-<footer class="footer mt-auto py-2 text-black">
-    <div class="container">
-        <div class="row">
-            <div class="col py-3">
-                <img src="/img/logo_company.png" class="img-fluid menu-icon image-shadow" alt="">
-                <h6>CompShop</h6>
-            </div>
-            <div class="col">
-                <h5 class="line">CompShop</h5>
-                <a class="nav-link p-1" href="">О компании</a>
-                <a class="nav-link p-1" href="">Новости</a>
-                <a class="nav-link p-1" href="">Партнерам</a>
-                <a class="nav-link p-1" href="">Для прессы</a>
-            </div>
-            <div class="col">
-                <h5 class="line">Покупателям</h5>
-                <a class="nav-link p-1" href="">Бонусная программа</a>
-                <a class="nav-link p-1" href="">Как оформить заказ</a>
-                <a class="nav-link p-1" href="">Пункты выдачи</a>
-                <a class="nav-link p-1" href="">Персональные данные</a>
-            </div>
-            <div class="col">
-                <h5 class="line">Услуги</h5>
-                <a class="nav-link p-1" href="">Доставка</a>
-                <a class="nav-link p-1" href="">Самовывоз</a>
-                <a class="nav-link p-1" href="">Сервис-центры</a>
-            </div>
-            <div class="col">
-                <h5 class="line">Помощь</h5>
-                <a class="nav-link p-1" href="">Способы оплаты</a>
-                <a class="nav-link p-1" href="">Как оформить заказ</a>
-                <a class="nav-link p-1" href="">Юр. лицам</a>
-                <a class="nav-link p-1" href="">Обмен, возврат, гарантия</a>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <h5 class="line">Соц.сети</h5>
-                    <div class="col py-2 px-1">
-                        <img src="/img/logo_vk.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-2 px-1">
-                        <img src="/img/logo_instagram.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-2 px-1">
-                        <img src="/img/logo_youtube.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col py-1 px-1">
-                        <img src="/img/logo_share.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-1 px-1">
-                        <img src="/img/logo_twitter.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-1 px-1">
-                        <img src="/img/logo_mail.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<script src="/bootstrap/js/bootstrap.min.js"></script>
-<script src="/js/change_count_products_in_basket.js"></script>
-</body>
+      </div>
+    </footer>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/js/burger.js"></script>
+    <script src="/js/bucket.js"></script>
+  </body>
 </html>

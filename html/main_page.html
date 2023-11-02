@@ -1,313 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/main_page.css" rel="stylesheet">
-    <title>CompShop</title>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/main_page.css" rel="stylesheet">
+	<title>CompShop</title>
 </head>
 <body>
-<header class="py-3 main-header">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-1" href='main_page.html'>
-                <img src="/img/logo_company.png" class="img-fluid" alt="logo">
-            </div>
-            <a class="col-1 text-center" href="catalog_page.html">
-                <img src="/img/logo_catalog.png" class="img-fluid menu-icon image-shadow" alt="">
-            </a>
-            <a class="col-1 text-center">
-                <img src="/img/logo_location.png" class="img-fluid menu-icon image-shadow" alt="">
-            </a>
-            <form class="col-6 d-flex">
-                <input class="form-control search-input" type="search" placeholder="Поиск...">
-                <button class="bg-transparent border-0 search-button" type="submit">
-                    <img src="/img/logo_search.png" alt="">
-                </button>
-            </form>
-            <a class="col-1 text-center">
-                <img src="/img/logo_user.png" class="img-fluid menu-icon image-shadow" alt="">
-            </a>
-            <a class="col-1 text-center">
-                <img src="/img/logo_favorite.png" class="img-fluid menu-icon image-shadow" alt="">
-            </a>
-            <a class="col-1 text-center" href="basket_page.html">
-                <img src="/img/logo_cart.png" class="img-fluid menu-icon image-shadow" alt="">
-            </a>
-        </div>
-    </div>
-</header>
-<div class="content-box">
-    <div class="container">
-        <div class="row py-2">
-            <div class="col-3 catalog-menu">
-                <div class="row row-cols-auto">
-                    <div class="col px-2">
-                        <img src="/img/logo_fridge.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-1">
-                        <h6>Бытовая техника</h6>
-                    </div>
-                </div>
-                <hr class="p-0 mx-0 my-0"/>
-                <div class="row row-cols-auto">
-                    <div class="col px-2">
-                        <img src="/img/logo_buaty.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-1">
-                        <h6>Красота и здоровье</h6>
-                    </div>
-                </div>
-                <hr class="p-0 mx-0 my-0"/>
-                <div class="row row-cols-auto">
-                    <div class="col px-2">
-                        <img src="/img/logo_phone.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-1">
-                        <h6>Смартфоны</h6>
-                    </div>
-                </div>
-                <hr class="p-0 mx-0 my-0"/>
-                <div class="row row-cols-auto">
-                    <div class="col px-2">
-                        <img src="/img/logo_pc.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-1">
-                        <h6>Коплектующие для ПК</h6>
-                    </div>
-                </div>
-                <hr class="p-0 mx-0 my-0"/>
-                <div class="row row-cols-auto">
-                    <div class="col px-2">
-                        <img src="/img/logo_compl.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-1">
-                        <h6>Мебель</h6>
-                    </div>
-                </div>
-                <hr class="p-0 mx-0 my-0"/>
-                <div class="row row-cols-auto">
-                    <div class="col px-2">
-                        <img src="/img/logo_chair.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-1">
-                        <h6>Офисное оборудование</h6>
-                    </div>
-                </div>
-                <hr class="p-0 mx-0 my-0"/>
-                <div class="row row-cols-auto">
-                    <div class="col px-2">
-                        <img src="/img/logo_car.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-1">
-                        <h6>Автотовары</h6>
-                    </div>
-                </div>
-                <hr class="p-0 mx-0 my-0"/>
-                <div class="row row-cols-auto">
-                    <div class="col px-2">
-                        <img src="/img/logo_power.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-1">
-                        <h6>Аксессуары</h6>
-                    </div>
-                </div>
-                <hr class="p-0 mx-0 my-0"/>
-                <div class="row row-cols-auto">
-                    <div class="col px-2">
-                        <img src="/img/logo_wrench.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-1">
-                        <h6>Услуги</h6>
-                    </div>
-                </div>
-                <hr class="p-0 mx-0 my-0"/>
-                <div class="row row-cols-auto">
-                    <div class="col px-2">
-                        <img src="/img/logo_sale.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-1">
-                        <h6>Акции и распродажи</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-9 slider_image_main_menu">
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="/img/slider.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/img/slider.png" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="/img/slider.png" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Предыдущий</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Следующий</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row py-2 row_products">
-            <div class="col column_product">
-                <img src="/img/sale.png" class="img-fluid menu-icon image-shadow" alt="">
-            </div>
-            <div class="col column_product_1 ms-3 me-3">
-                <img src="/img/sale.png" class="img-fluid menu-icon image-shadow" alt="">
-            </div>
-            <div class="col column_product_2 me-3">
-                <img src="/img/sale.png" class="img-fluid menu-icon image-shadow" alt="">
-            </div>
-            <div class="col column_product_3">
-                <img src="/img/sale.png" class="img-fluid menu-icon image-shadow" alt="">
-            </div>
-        </div>
-    </div>
-    <div class="container brand_container">
-        <div class="row row_text_brand">
-            <h5>Бренды, продающиеся в нашем магазине:</h5>
-        </div>
-        <div class="row py-2">
-            <div class="col column_brand_1">
-                <img src="/img/logo_cart.png" class="image-shadow"  alt="">
-            </div>
-            <div class="col column_brand_2 ms-2 me-2">
-                <img src="/img/logo_cart.png" class="image-shadow"  alt="">
-            </div>
-            <div class="col column_brand_3">
-                <img src="/img/logo_cart.png" class="image-shadow"  alt="">
-            </div>
-            <div class="col column_brand_4 ms-2 me-2">
-                <img src="/img/logo_cart.png" class="image-shadow"  alt="">
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <h5>Популярные товары:</h5>
-        </div>
-        <div class="row row_popular_product">
-            <div class="col popular_product_1">
-                <a href="item_page.html"><img src="/img/sale.png" href="/html/item_page.html" class="img-fluid image-shadow" alt=""></a>
-            </div>
-            <div class="col me-2 ms-2 popular_product_2">
-                <img src="/img/sale.png" class="img-fluid image-shadow" alt="">
-            </div>
-            <div class="col popular_product_3">
-                <img src="/img/sale.png" class="img-fluid image-shadow" alt="">
-            </div>
-            <div class="col ms-2 me-2 popular_product_4">
-                <img src="/img/sale.png" class="img-fluid image-shadow" alt="">
-            </div>
-            <div class="col popular_product_5">
-                <img src="/img/sale.png" class="img-fluid image-shadow" alt="">
-            </div>
-            <div class="col ms-2 popular_product_6">
-                <img src="/img/sale.png" class="img-fluid image-shadow" alt="">
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="chat" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Чат DNS</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-            </div>
-            <div class="modal-body text-center" id="be">
-            </div>
-            <div class="modal-footer d-flex align-items-center">
-                <input type="text" name="" id="chatInput">
-                <button class="btn btn-primary" onclick="send()">Отправить</button>
-            </div>
-        </div>
-    </div>
-</div>
-<button class="btn chat-bt open-button" data-bs-toggle="modal" data-bs-target="#chat">
-    <img src="/img/arrow_up.png" alt="" class="icons">
-</button>
-
-<footer class="footer mt-auto py-2 text-black">
-    <div class="container">
-        <div class="row">
-            <div class="col py-3">
-                <img src="/img/logo_company.png" class="img-fluid menu-icon image-shadow" alt="">
-                <h6>CompShop</h6>
-            </div>
-            <div class="col">
-                <h5 class="line">CompShop</h5>
-                <a class="nav-link p-1" href="">О компании</a>
-                <a class="nav-link p-1" href="">Новости</a>
-                <a class="nav-link p-1" href="">Партнерам</a>
-                <a class="nav-link p-1" href="">Для прессы</a>
-            </div>
-            <div class="col">
-                <h5 class="line">Покупателям</h5>
-                <a class="nav-link p-1" href="">Бонусная программа</a>
-                <a class="nav-link p-1" href="">Как оформить заказ</a>
-                <a class="nav-link p-1" href="">Пункты выдачи</a>
-                <a class="nav-link p-1" href="">Персональные данные</a>
-            </div>
-            <div class="col">
-                <h5 class="line">Услуги</h5>
-                <a class="nav-link p-1" href="">Доставка</a>
-                <a class="nav-link p-1" href="">Самовывоз</a>
-                <a class="nav-link p-1" href="">Сервис-центры</a>
-            </div>
-            <div class="col">
-                <h5 class="line">Помощь</h5>
-                <a class="nav-link p-1" href="">Способы оплаты</a>
-                <a class="nav-link p-1" href="">Как оформить заказ</a>
-                <a class="nav-link p-1" href="">Юр. лицам</a>
-                <a class="nav-link p-1" href="">Обмен, возврат, гарантия</a>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <h5 class="line">Соц.сети</h5>
-                    <div class="col py-2 px-1">
-                        <img src="/img/logo_vk.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-2 px-1">
-                        <img src="/img/logo_instagram.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-2 px-1">
-                        <img src="/img/logo_youtube.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col py-1 px-1">
-                        <img src="/img/logo_share.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-1 px-1">
-                        <img src="/img/logo_twitter.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                    <div class="col py-1 px-1">
-                        <img src="/img/logo_mail.png" class="img-fluid menu-icon image-shadow" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<script src="chatbot.js"></script>
-<script src="/bootstrap/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+	<header class="py-3 main-header d-lg-none">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-2">
+					<a aria-expanded="false" data-toggle="collapse" href="#mobileMenu" role="button"><img alt="Burger Menu" class="img-fluid" src="/img/logo_catalog.png"></a>
+				</div>
+				<div class="col-8 text-center compshop">
+					CompShop
+				</div>
+				<div class="col-2"><img alt="Company Logo" class="img-fluid" src="/img/logo_company.png"></div>
+			</div>
+		</div>
+	</header>
+	<header class="py-3 main-header d-none d-lg-block">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-1"><img alt="logo" class="img-fluid" src="/img/logo_company.png"></div><a class="col-1 text-center" href="catalog_page.html"><img alt="Catalog" class="img-fluid menu-icon image-shadow" src="/img/logo_catalog.png"></a> <!-- Добавляем кнопку для открытия бургер-меню на мобильных устройствах -->
+				<div class="col-1 text-center">
+					<button class="btn" id="burger-button"><img alt="Location" class="img-fluid menu-icon image-shadow" src="/img/logo_location.png"></button>
+				</div>
+				<form class="col-6 d-flex">
+					<input class="form-control search-input" placeholder="Поиск..." type="search"> <button class="bg-transparent border-0 search-button" type="submit"><img alt="Search" src="/img/logo_search.png"></button>
+				</form><a class="col-1 text-center"><img alt="User" class="img-fluid menu-icon image-shadow" src="/img/logo_user.png"></a> <a class="col-1 text-center"><img alt="Favorite" class="img-fluid menu-icon image-shadow" src="/img/logo_favorite.png"></a> <a class="col-1 text-center" href="basket_page.html"><img alt="Cart" class="img-fluid menu-icon image-shadow" src="/img/logo_cart.png"></a>
+			</div>
+		</div>
+	</header>
+	<div class="d-lg-none">
+		<div class="collapse bg-orange dropdown-menu-bottom" id="mobileMenu">
+			<div class="d-flex align-items-center py-2">
+				<img alt="User" class="img-fluid pr-2" src="/img/logo_user.png"> <a href="#">Кабинет пользователя</a>
+			</div>
+			<div class="d-flex align-items-center py-2">
+				<img alt="Catalog" class="img-fluid pr-2" src="/img/logo_catalog.png"> <a href="catalog_page.html">Каталог</a>
+			</div>
+			<div class="d-flex align-items-center py-2">
+				<img alt="Cart" class="img-fluid pr-2" src="/img/logo_cart.png"> <a href="basket_page.html">Корзина</a>
+			</div>
+			<div class="d-flex align-items-center py-2">
+				<img alt="Favorite" class="img-fluid pr-2" src="/img/logo_favorite.png"> <a href="#">Избранное</a>
+			</div>
+		</div>
+	</div>
+	<div class="content-box">
+		<div class="container">
+			<div class="row py-2">
+				<div class="col-3 catalog-menu">
+					<div class="row row-cols-auto">
+						<div class="col px-2"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_fridge.png"></div>
+						<div class="col py-1">
+							<h6>Бытовая техника</h6>
+						</div>
+					</div>
+					<hr class="p-0 mx-0 my-0">
+					<div class="row row-cols-auto">
+						<div class="col px-2"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_buaty.png"></div>
+						<div class="col py-1">
+							<h6>Красота и здоровье</h6>
+						</div>
+					</div>
+					<hr class="p-0 mx-0 my-0">
+					<div class="row row-cols-auto">
+						<div class="col px-2"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_phone.png"></div>
+						<div class="col py-1">
+							<h6>Смартфоны</h6>
+						</div>
+					</div>
+					<hr class="p-0 mx-0 my-0">
+					<div class="row row-cols-auto">
+						<div class="col px-2"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_pc.png"></div>
+						<div class="col py-1">
+							<h6>Коплектующие для ПК</h6>
+						</div>
+					</div>
+					<hr class="p-0 mx-0 my-0">
+					<div class="row row-cols-auto">
+						<div class="col px-2"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_compl.png"></div>
+						<div class="col py-1">
+							<h6>Мебель</h6>
+						</div>
+					</div>
+					<hr class="p-0 mx-0 my-0">
+					<div class="row row-cols-auto">
+						<div class="col px-2"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_chair.png"></div>
+						<div class="col py-1">
+							<h6>Офисное оборудование</h6>
+						</div>
+					</div>
+					<hr class="p-0 mx-0 my-0">
+					<div class="row row-cols-auto">
+						<div class="col px-2"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_car.png"></div>
+						<div class="col py-1">
+							<h6>Автотовары</h6>
+						</div>
+					</div>
+					<hr class="p-0 mx-0 my-0">
+					<div class="row row-cols-auto">
+						<div class="col px-2"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_power.png"></div>
+						<div class="col py-1">
+							<h6>Аксессуары</h6>
+						</div>
+					</div>
+					<hr class="p-0 mx-0 my-0">
+					<div class="row row-cols-auto">
+						<div class="col px-2"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_wrench.png"></div>
+						<div class="col py-1">
+							<h6>Услуги</h6>
+						</div>
+					</div>
+					<hr class="p-0 mx-0 my-0">
+					<div class="row row-cols-auto">
+						<div class="col px-2"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_sale.png"></div>
+						<div class="col py-1">
+							<h6>Акции и распродажи</h6>
+						</div>
+					</div>
+				</div>
+				<div class="col-9 slider_image_main_menu">
+					<div class="carousel slide" data-bs-ride="carousel" id="carouselExampleControls">
+						<div class="carousel-indicators">
+							<button aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#carouselExampleIndicators" type="button"></button> <button aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#carouselExampleIndicators" type="button"></button> <button aria-label="Slide 3" data-bs-slide-to="2" data-bs-target="#carouselExampleIndicators" type="button"></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active"><img alt="..." class="d-block w-100" src="/img/slider.png"></div>
+							<div class="carousel-item"><img alt="..." class="d-block w-100" src="/img/slider.png"></div>
+							<div class="carousel-item"><img alt="..." class="d-block w-100" src="/img/slider.png"></div>
+						</div><button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleControls" type="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span> <span class="visually-hidden">Предыдущий</span></button> <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleControls" type="button"><span aria-hidden="true" class="carousel-control-next-icon"></span> <span class="visually-hidden">Следующий</span></button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row py-2 row_products">
+				<div class="col column_product"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/sale.png"></div>
+				<div class="col column_product_1 ms-3 me-3"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/sale.png"></div>
+				<div class="col column_product_2 me-3"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/sale.png"></div>
+				<div class="col column_product_3"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/sale.png"></div>
+			</div>
+		</div>
+		<div class="container brand_container">
+			<div class="row row_text_brand">
+				<h5>Бренды, продающиеся в нашем магазине:</h5>
+			</div>
+			<div class="row py-2">
+				<div class="col column_brand_1"><img alt="" class="image-shadow" src="/img/apple.jpg"></div>
+				<div class="col column_brand_2 ms-2 me-2"><img alt="" class="image-shadow" src="/img/samsung-logo.png"></div>
+				<div class="col column_brand_3"><img alt="" class="image-shadow" src="/img/xiaomi%20logo.png"></div>
+				<div class="col column_brand_4 ms-2 me-2"><img alt="" class="image-shadow" src="/img/poco_logo.png"></div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<h5>Популярные товары:</h5>
+			</div>
+			<div class="row row_popular_product">
+				<div class="col popular_product_1">
+					<a href="item_page.html"><img alt="" class="img-fluid image-shadow" src="/img/iphone_2.jpg"></a>
+				</div>
+				<div class="col me-2 ms-2 popular_product_2"><img alt="" class="img-fluid image-shadow" src="/img/poco.jpg"></div>
+				<div class="col popular_product_3"><img alt="" class="img-fluid image-shadow" src="/img/samsung.jpg"></div>
+				<div class="col ms-2 me-2 popular_product_4"><img alt="" class="img-fluid image-shadow" src="/img/nothing_phone.png"></div>
+				<div class="col popular_product_5"><img alt="" class="img-fluid image-shadow" src="/img/nothing_phone.png"></div>
+				<div class="col ms-2 popular_product_6"><img alt="" class="img-fluid image-shadow" src="/img/9s_xiaomi.jpg"></div>
+			</div>
+		</div>
+	</div>
+	<div aria-hidden="true" aria-labelledby="exampleModalLabel" class="modal fade" id="chat" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Чат DNS</h5><button aria-label="Закрыть" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+				</div>
+				<div class="modal-body text-center" id="be"></div>
+				<div class="modal-footer d-flex align-items-center">
+					<input id="chatInput" name="" type="text"> <button class="btn btn-primary" onclick="send()">Отправить</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<button class="btn chat-bt open-button btn-animate" data-bs-target="#chat" data-bs-toggle="modal">Напишите нам!</button>
+	<footer class="footer mt-auto py-2 text-black">
+		<div class="container">
+			<div class="row">
+				<div class="col py-3">
+					<img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_company.png">
+					<h6>CompShop</h6>
+				</div>
+				<div class="col">
+					<h5 class="line">CompShop</h5><a class="nav-link p-1" href="">О компании</a> <a class="nav-link p-1" href="">Новости</a> <a class="nav-link p-1" href="">Партнерам</a> <a class="nav-link p-1" href="">Для прессы</a>
+				</div>
+				<div class="col">
+					<h5 class="line">Покупателям</h5><a class="nav-link p-1" href="">Бонусная программа</a> <a class="nav-link p-1" href="">Как оформить заказ</a> <a class="nav-link p-1" href="">Пункты выдачи</a> <a class="nav-link p-1" href="">Персональные данные</a>
+				</div>
+				<div class="col">
+					<h5 class="line">Услуги</h5><a class="nav-link p-1" href="">Доставка</a> <a class="nav-link p-1" href="">Самовывоз</a> <a class="nav-link p-1" href="">Сервис-центры</a>
+				</div>
+				<div class="col">
+					<h5 class="line">Помощь</h5><a class="nav-link p-1" href="">Способы оплаты</a> <a class="nav-link p-1" href="">Как оформить заказ</a> <a class="nav-link p-1" href="">Юр. лицам</a> <a class="nav-link p-1" href="">Обмен, возврат, гарантия</a>
+				</div>
+				<div class="col">
+					<div class="row">
+						<h5 class="line">Соц.сети</h5>
+						<div class="col py-2 px-1"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_vk.png"></div>
+						<div class="col py-2 px-1"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_instagram.png"></div>
+						<div class="col py-2 px-1"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_youtube.png"></div>
+					</div>
+					<div class="row">
+						<div class="col py-1 px-1"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_share.png"></div>
+						<div class="col py-1 px-1"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_twitter.png"></div>
+						<div class="col py-1 px-1"><img alt="" class="img-fluid menu-icon image-shadow" src="/img/logo_mail.png"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="chatbot.js">
+	</script> 
+	<script src="/bootstrap/js/bootstrap.min.js">
+	</script> 
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js">
+	</script>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js">
+	</script> 
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="/js/burger.js">
+	</script>
 </body>
 </html>
