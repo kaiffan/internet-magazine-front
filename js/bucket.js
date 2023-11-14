@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
               </div>
               <div class="col-4">
                   <h5 class="mb-2">Дополнительная гарантия:</h5>
-                  <!-- Пока что оставим кнопки без динамики -->
                   <button class="btn btn-secondary btn_model" type="button">Нет 0₽</button>
                   <button class="btn btn-secondary btn_active" type="button">+12 мес. 650₽</button>
                   <button class="btn btn-secondary btn_model" type="button">+24 мес. 1200₽</button>

@@ -94,14 +94,15 @@
     object-fit: cover;
     width: 277px;
     height: 300px;
-    background-size: 80% 80%;
+    background-size: 50% 20%;
     border: 1px solid black;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
-.column_brand_1 img {
+.column_brand_1 img, .column_brand_2 img, .column_brand_3 img, .column_brand_4 img {
     height: 100%;
     width: auto;
 }
